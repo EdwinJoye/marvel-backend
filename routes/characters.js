@@ -8,7 +8,7 @@ router.get("/characters", async (req, res) => {
   console.log("characters", apikey);
   try {
     const response = await axios.get(
-      `https://lereacteur-marvel-api.herokuapp.com/characters?apiKey=${apikey}`
+      `https://lereacteur-marvel-api.herokuapp.com/characters?name=${searchBar}?apiKey=${apikey}`
     );
 
     const data = response.data;
