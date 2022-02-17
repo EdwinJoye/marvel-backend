@@ -7,7 +7,7 @@ const apikey = process.env.API_KEY;
 router.get("/comics", async (req, res) => {
   try {
     const response = await axios.get(
-      `https://lereacteur-marvel-api.herokuapp.com/comics?apiKey=${apikey}&title=${SearchBar}`
+      `https://lereacteur-marvel-api.herokuapp.com/comics?apiKey=${apikey}`
     );
 
     const data = response.data;
