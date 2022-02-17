@@ -10,7 +10,7 @@ router.get("/characters", async (req, res) => {
   const limit = req.query.limit;
   const page = req.query.page ? Number(req.query.page) : 1;
   const skip = limit * (page - 1);
-  console.log(skip);
+
   console.log(page);
   console.log(req.query);
 
