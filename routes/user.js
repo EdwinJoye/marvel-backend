@@ -10,13 +10,8 @@ const User = require("../models/User");
 router.post("/signup", async (req, res) => {
   try {
     const { email, username, password } = req.fields;
-    console.log(req.fields);
-    console.log("pass1");
     const emailUsed = await User.findOne({ email: email });
-    console.log("pass2");
-    console.log(emailUsed);
     const usernameUsed = await User.findOne({ username: username });
-    console.log(7);
     if (!usernameUsed) {
       if (!emailUsed) {
         if (email && username && password) {
