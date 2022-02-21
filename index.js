@@ -24,6 +24,6 @@ app.get("/", (req, res) => {
   res.status(200).json("Welcome to the signup project");
 });
 
-app.listen(3001, () => {
+app.listen(process.env.PORT, () => {
   console.log("server started");
 });
